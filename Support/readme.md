@@ -1,18 +1,22 @@
-## Why
-This folder is created to aid in the troubleshooting when deploying this application into your tenant/environment.
+# Scripts de diagnóstico
 
-# **Start-ChatWithUser.ps1**
-This script is designed for the purpose of testing the chat functionality of the bot within the Teams App.  Some modifications are needed before you can start using this. In the "Variables need to be replaced to start using the script" section, there are a couple of variables you will need to replace:
+Esta pasta vem do projeto original do Company Communicator. Os scripts ajudam a conferir problemas de implantação no tenant. Não são uma prova de que a instalação da Casa Flora usa exatamente esta configuração.
 
-* $tenantId = "tenant.onmicrosoft.com" #or in GUID format "00000000-0000-0000-0000-000000000000"
-* $teamsAppId = "00000000-0000-0000-0000-000000000000" # AppId of the Teams App Manifest 
-* $graphAppId = "00000000-0000-0000-0000-000000000000"
-* $userAppId = "00000000-0000-0000-0000-000000000000"
+## `Start-ChatWithUser.ps1`
 
-For the secrets, I recommend to an extra secret per App which you can delete after using this script. This way, it won't interfere with the configuration of the application. And as an added bonus, it's more secure because the script will only run with the newly created secrets.
+Testa o chat do bot dentro do Teams. Antes de usar, preencha as variáveis na seção “Variables need to be replaced to start using the script”:
 
-# **Check-AppRegistrations.ps1**
-This script is meant to retrieve the provisioned App Registrations and the secrets which are stored in the KeyVault are working together correctly or not. If an access token is being returned, it means that the combinations of AppId + AppSecrets are working.
+- `$tenantId`: domínio do tenant, como `tenant.onmicrosoft.com`, ou GUID.
+- `$teamsAppId`: AppId do manifesto do aplicativo Teams.
+- `$graphAppId`: AppId da aplicação Graph.
+- `$userAppId`: AppId da aplicação de usuário.
 
-# **Check-GraphApp.ps1**
-This a simplified version of the Check-AppRegistrations script. If you just want to see if the AppId + AppSecret is working correctly, please use this one. It is meant to use if the App registration of the Graph App (e.g. the main App) is working correctly (e.g. combination of AppId + AppSecret) and also if the API Permissions are set correct to retrieve Groups and Users
+Para os segredos, a orientação original é criar um segredo temporário por aplicação e removê-lo após o teste. Assim, o teste não depende de substituir os segredos já usados pela aplicação. Não salve credenciais reais no repositório nem compartilhe a saída com tokens.
+
+## `Check-AppRegistrations.ps1`
+
+Confere se as App Registrations e os segredos armazenados no Key Vault funcionam juntos. Receber um access token indica que a combinação de AppId e segredo foi aceita. Isso, sozinho, não valida todo o envio de mensagens.
+
+## `Check-GraphApp.ps1`
+
+É uma verificação mais simples da aplicação Graph. Confere AppId, segredo e permissões de API para consultar grupos e usuários. Use quando a dúvida estiver nessa combinação, sem precisar executar o diagnóstico completo.

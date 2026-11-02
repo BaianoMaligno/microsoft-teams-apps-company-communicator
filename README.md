@@ -5,22 +5,16 @@
 
 [Prévia para o LinkedIn](https://soteropolitano.github.io/microsoft-teams-apps-company-communicator/linkedin-preview-v2/)
 
-Este repositório registra minha participação na implantação do **Microsoft Teams
-Company Communicator** na **Casa Flora**, como parte da evolução da comunicação
-corporativa no ecossistema Microsoft 365.
+Participei da implantação do **Microsoft Teams Company Communicator** na **Casa Flora**. Deixei aqui o que fiz na parte técnica e a documentação do template usado.
 
-O objetivo foi disponibilizar no Teams um canal mais padronizado para a criação e
-o envio de comunicados internos, complementando os meios de comunicação já
-utilizados pela empresa. Minha atuação esteve concentrada na implementação
-técnica, configuração, validação, suporte à operação e adoção da solução pelas
-áreas envolvidas.
+A ideia era criar e enviar comunicados internos pelo Teams, complementando os canais que a empresa já usava. Atuei na implementação, configuração, validação, suporte à operação e adoção pelas áreas envolvidas.
 
 > Este é um fork do template open source originalmente mantido pela Microsoft.
 > Informações sensíveis, nomes de usuários, identificadores do tenant,
 > credenciais e configurações internas da Casa Flora não fazem parte deste
 > repositório.
 
-## Escopo da implementação
+## O que fiz
 
 - Preparação e implantação dos aplicativos do Company Communicator no
   **Microsoft Teams**, contemplando a experiência de autores e destinatários.
@@ -44,7 +38,7 @@ flowchart LR
     E --> F[Colaboradores e grupos destinatários]
 ```
 
-A solução combina duas frentes principais:
+Os componentes ficaram assim:
 
 | Camada | Papel na implementação |
 | --- | --- |
@@ -56,13 +50,9 @@ A solução combina duas frentes principais:
 
 ## Resultado profissional
 
-A entrega colocou em funcionamento uma solução corporativa integrada ao Teams e
-apoiou a padronização dos comunicados internos. O projeto também consolidou, em
-um cenário real, conhecimentos de infraestrutura e sustentação aplicados a
-Microsoft 365, Teams, Azure, identidade, permissões, implantação e diagnóstico
-de aplicações corporativas.
+A solução ficou em funcionamento no Teams para apoiar os comunicados internos. Foi uma aplicação prática de infraestrutura e sustentação com Microsoft 365, Teams, Azure, identidade, permissões e diagnóstico de aplicações.
 
-## Tecnologias e competências demonstradas
+## Tecnologias usadas
 
 `Microsoft Teams` · `Teams Apps` · `Microsoft Azure` · `Azure Bot` ·
 `Microsoft 365` · `identidade e permissões` · `implantação` · `troubleshooting` ·
@@ -70,17 +60,16 @@ de aplicações corporativas.
 
 ## Sobre o template original
 
-O conteúdo abaixo corresponde à documentação base do projeto **Company
-Communicator App Template**, preservada como referência técnica.
+Abaixo mantive a documentação original do **Company Communicator App Template**, com os créditos e termos legais. Essa parte descreve o template da Microsoft, não uma autoria minha.
 
 ---
 
 ## Company Communicator App Template
 
-[Architecture](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki/Solution-overview) | [Documentation](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki) | [Deployment guide powershell](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki/Deployment-guide-powershell)  |[Deployment guide](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki/Deployment-guide) | [User manual](https://github.com/OfficeDev/microsoft-teams-apps-company-communicator/wiki/User-manual) | 
+[Architecture](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki/Solution-overview) | [Documentation](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki) | [Deployment guide powershell](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki/Deployment-guide-powershell)  |[Deployment guide](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki/Deployment-guide) | [User manual](https://github.com/OfficeDev/microsoft-teams-apps-company-communicator/wiki/User-manual) |
 | ---- | ---- | ---- | ---- | ---- |
 
-Company Communicator is a custom Teams app that enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Use this template for multiple scenarios, such as new initiative announcements, employee onboarding, modern learning and development, or organization-wide broadcasts. 
+Company Communicator is a custom Teams app that enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Use this template for multiple scenarios, such as new initiative announcements, employee onboarding, modern learning and development, or organization-wide broadcasts.
 
 The app provides an easy interface for designated users to create, preview, collaborate and send messages. It's also a foundation for building custom targeted communication capabilities, such as custom telemetry on how many users acknowledged or interacted with a message.
 
@@ -107,11 +96,11 @@ When you're ready to try out Company Communicator, or to use it in your own orga
 * [Deployment guide certificate](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/wiki/Deployment-guide-certificate).
     * Use this option to deploy the latest version of Company Communicator with certificates.
 
-## Migration 
+## Migration
 
-If you already have older version of Company Communicator installed, then please use this [v5 migration guide](https://github.com/OfficeDev/microsoft-teams-apps-company-communicator/wiki/v5-migration-guide). Please note that deploying the major version update, like the latest version of Company Communicator involves more than syncing the App Service and Azure Functions, so plan to review the migration guide before migrating to latest. 
+If you already have older version of Company Communicator installed, then please use this [v5 migration guide](https://github.com/OfficeDev/microsoft-teams-apps-company-communicator/wiki/v5-migration-guide). Please note that deploying the major version update, like the latest version of Company Communicator involves more than syncing the App Service and Azure Functions, so plan to review the migration guide before migrating to latest.
 
-Migrating to newer versions. 
+Migrating to newer versions.
 
  * [v5 migration guide](https://github.com/OfficeDev/microsoft-teams-apps-company-communicator/wiki/v5-migration-guide)
  * [v4 migration guide](https://github.com/OfficeDev/microsoft-teams-apps-company-communicator/wiki/v4-migration-guide)
@@ -128,7 +117,7 @@ Please report bugs and other code issues [here](https://github.com/OfficeDev/mic
 
 This app template is provided under the [MIT License](https://github.com/OfficeDev/microsoft-teams-company-communicator-app/blob/main/LICENSE) terms.  In addition to these terms, by using this app template you agree to the following:
 
-- You, not Microsoft, will license the use of your app to users or organization. 
+- You, not Microsoft, will license the use of your app to users or organization.
 
 - This app template is not intended to substitute your own regulatory due diligence or make you or your app compliant with respect to any applicable regulations, including but not limited to privacy, healthcare, employment, or financial regulations.
 
